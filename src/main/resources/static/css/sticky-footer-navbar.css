@@ -1,0 +1,21 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.navbar-light .navbar-toggler {
+ border-color: transparent;
+ padding: 0;
+}
+
+.navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}

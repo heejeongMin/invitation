@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'WagleWagle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2301-wagle@1.0/WagleWagle.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wagle-font {
+    font-family: "WagleWagle";
+    font-weight: normal;
+}
+
+.main-font {
+    font-family: "omyu_pretty";
+    font-weight: normal;
+    color: grey;
+}
+
+.cursive-font {
+    font-family: "InkLipquid";
+    font-weight: bold;
+    color: pink;
+}
+.container-fluid {
+    padding : 5px 10px;
+}
+
+.navbar-top {
+    background-color: snow;
+}
+
+.navbar-brand {
+    padding-bottom: 0;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.a-title {
+    text-decoration: none;
+    color: #4e423b;
+}
+
+.a-title:hover {
+    color: #15751b;
+    text-decoration: underline;
+}
+
+
+body {
+    background-color: snow;
+}
+
+.invi-wrapper {
+ background-color: white;
+ height: 600px;
+ width: 300px;
+}
+
+.main-photo {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+main > .container {
+    max-width: 300px;
+    padding: 60px 0 0 0;
+}
+
+.card {
+    width: 300px;
+    height: 600px;
+}
+
+.image-wrap {
+    margin-top: 26px;
+    width: 250px;
+    height: 380px;
+}
+
+.card-bride-groom {
+    position: absolute;
+    width: 250px;
+    height: 440px;
+}
+
+.card-bride-groom .names {
+    width:100%;
+    font-size: 35px;
+    text-align : center;
+}
+
+.card-bride-groom .message {
+    width:100%;
+    font-size: 35px;
+    text-align : center;
+    bottom: 0;
+    position: absolute;
+}
+
+.card-date-loc {
+    width: 250px;
+    margin-top: 40px;
+}
+
+.card-date-loc .message {
+    text-align: center;
+    margin: 0 0;
+}
+
+.guide-func {
+    display: flex;
+    justify-content : space-between;
+}
+
+.guide-func .message {
+    color: grey;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0px 3px;
+}
+
+.header-menu-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
