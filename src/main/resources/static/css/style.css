@@ -72,8 +72,8 @@ body {
 
 .invi-wrapper {
  background-color: white;
- height: 600px;
- width: 300px;
+ height: 500px;
+ width: 250px;
 }
 
 .main-photo {
@@ -82,25 +82,25 @@ body {
 }
 
 main > .container {
-    max-width: 300px;
-    padding: 60px 0 0 0;
+    max-width: 250px;
+    padding: 100px 0 0 0;
 }
 
 .card {
-    width: 300px;
-    height: 600px;
+    width: 250px;
+    height: 500px;
 }
 
 .image-wrap {
     margin-top: 26px;
-    width: 250px;
-    height: 380px;
+    width: 200px;
+    height: 300px;
 }
 
 .card-bride-groom {
     position: absolute;
-    width: 250px;
-    height: 440px;
+    width: 200px;
+    height: 370px;
 }
 
 .card-bride-groom .names {
@@ -118,7 +118,7 @@ main > .container {
 }
 
 .card-date-loc {
-    width: 250px;
+    width: 200px;
     margin-top: 40px;
 }
 
@@ -143,4 +143,152 @@ main > .container {
     display: flex;
     justify-content: space-between;
     padding: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+.card-bride-groom span{
+  position: absolute;
+  width:50px;
+  height:50px;
+  background:purple ;
+  box-shadow:0px 0px  10px purple,
+    0px 0px  40px purple,
+  0px 0px  80px purple,
+  0px 0px  120px purple,
+  0px 0px  200px purple;
+  border-radius:30%;
+  outline:none;
+
+}
+.card-bride-groom span:nth-child(n+1){
+  background:transparent;
+  border:5px solid cyan;
+  animation:animate2 5s linear infinite ;
+
+}
+@keyframes animate2{
+  100%{border:5px solid purple;
+  background:purple}
+}
+.card-bride-groom span:nth-child(1){
+  top:100%;
+  left:20%;
+  animation:animate 10s linear infinite ;
+}
+
+.card-bride-groom span:nth-child(2){
+  top:100%;
+  left:60%;
+  animation:animate 18s linear infinite ;
+}
+
+.card-bride-groom span:nth-child(3){
+  top:100%;
+  left:80%;
+  animation:animate 25s linear infinite ;
+}
+
+.card-bride-groom span:nth-child(4){
+  top:100%;
+  left:40%;
+  animation:animate 14s linear infinite ;
+}
+
+.card-bride-groom span:nth-child(5){
+  top:100%;
+  left:30%;
+  animation:animate 17s linear infinite ;
+}
+
+.card-bride-groom span:nth-child(6){
+  top:100%;
+  left:60%;
+  animation:animate 6s linear infinite ;
+}
+
+.card-bride-groom span:nth-child(7){
+  top:65%;
+  left:25%;
+  animation:animate 14s linear infinite ;
+}
+
+.card-bride-groom span:nth-child(8){
+  top:90%;
+  left:77%;
+  animation:animate 14s linear infinite ;
+}
+@keyframes animate{
+  0%{
+    transform:scale(0);
+    opacity: 1;
+
+  }
+  50%{transform:rotateZ(180) translateX(-50px);opacity: 0.8;}
+  100%{
+    transform:scale(1) translateY(-500px) rotateZ(360deg) translateX(80px);
+    z-index:1000;
+    opacity: 0.3;
+
+  }
+}
+
+
+
+
+.form-container {
+    padding: 100px 20px 0px 20px;
+}
+
+.new-form {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.config-zone > form {
+    padding: 15px;
+}
+
+.form-element-wrap {
+    display: flex;
+}
+
+.form-element-wrap > label {
+    width: 100px;
+}
+
+.form-element-wrap .col {
+    padding: 0 2px 2px;
+}
+
+.form-group {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.form-check {
+    padding-left: 3em;
+}
+
+.form-check .form-check-input {
+    margin-left: 1px;
+    margin-right: 3px;
+}
+
+.form-group .title {
+   border-radius: 100px 15px 100px 10px;
+   background-color: snow;
+}
+
+.form-element-wrap .row {
+    width : 300px;
 }
