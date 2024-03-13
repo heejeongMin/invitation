@@ -30,7 +30,7 @@ $(document).ready(function(){
 
   $('#loc-name').on("change", function() {
     $('#loc-config').text(event.target.value);
-  })
+  });
 
   $('.effect-config').on("click", function() {
     var effect = $(event.target).text();
@@ -39,8 +39,33 @@ $(document).ready(function(){
     } else if (effect == '효과 1') {
         $('.invi-wrapper-config > .particle').show();
     }
+  });
 
-  })
+  $(window).scroll(function() {
+    console.log("test");
+    doAnimations();
+  });
+//  $(window).trigger('scroll');
+
+  function doAnimations() {
+      // Calc current offset and get all animatables
+      var offset = $(window).scrollTop() + $(window).height(),
+          $animatables = $('.animatable');
+
+      // Unbind scroll handler if we have no animatables
+      if ($animatables.size() == 0) {
+        $(window).off('scroll', doAnimations);
+      }
+
+      // Check all animatables and animate them if necessary
+      $animatables.each(function(i) {
+         var $animatable = $(this);
+        if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+          $animatable.removeClass('animatable').addClass('animated');
+        }
+      });
+    };
+
 
  function nameConfigSet() {
         var bride_lastname_kr = $('#bride-lastname-kr').val();

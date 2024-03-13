@@ -24,6 +24,11 @@
     font-weight: normal;
 }
 
+input.main-font::placeholder {
+  color: lightgrey;
+  font-size: 0.8em;
+}
+
 .main-font {
     font-family: "omyu_pretty";
     font-weight: normal;
@@ -261,9 +266,11 @@ main > .container {
 }
 
 .form-element-wrap > label {
-    width: 100px;
+    width: 130px;
 }
-
+.form-element-wrap .row {
+    margin-right: 2px;
+}
 .form-element-wrap .col {
     padding: 0 2px 2px;
 }
@@ -273,6 +280,7 @@ main > .container {
     border-radius: 4px;
     padding: 10px;
     margin: 15px 0;
+    max-width: 410px;
 }
 
 .form-check {
@@ -318,4 +326,208 @@ main > .container {
 
 .config-intro {
     width: 200px;
+}
+.accordion-button:focus{
+    border-color: transparent;
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    color: #86b7fe;
+    background-color: snow;
+}
+
+textarea {
+   resize: none;
+}
+
+.new-form-btn {
+    margin-top: 10px;
+    border-color: lightgrey;
+}
+
+.design-config {
+    cursor: pointer;
+}
+.effect-config {
+    cursor: pointer;
+}
+
+.accordion-guide-info {
+    margin-left: 3em;
+    font-size: 0.8em;
+    color: lightgrey;
+}
+
+hr.dotted {
+  border-top: 1px dotted #bbb;
+}
+
+.decesed-check {
+    width: 0.8em;
+    height: 0.8em;
+    margin-top: 6px;
+}
+
+.kakao-div {
+    display: flex;
+}
+.kakaopay-guide {
+    padding: 5px 3px 0 5px;
+    font-size: 0.8em;
+}
+
+
+
+.invi-view-container {
+    background: black;
+    max-width: 430px;
+    height: 100vh;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.invi-view-wrapper {
+    height: 100vh;
+}
+
+.invi-view-wrapper .invi-view-image-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 80px 15px 15px;
+    min-width: 200px;
+    max-width: 380px;
+    min-height: 300px;
+    max-height: 680px;
+}
+
+.invi-view-image-frame-1 {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -40px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.invi-view-image-frame-1 > p {
+    font-size: 3em;
+}
+
+.invi-view-card-date-loc {
+    font-size: 1.5em;
+    margin-top: 2em;
+}
+
+.invi-view-card-date-loc .message{
+   text-align: center;
+   margin: 0 0;
+}
+
+.animatable {
+ /* initially hide animatable objects */
+  visibility: hidden;
+
+  /* initially pause animatable objects their animations */
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* show objects being animated */
+.animated {
+  visibility: visible;
+
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeBgColor {
+  0%{
+    background:none;
+  }
+  70%{
+    background:none;
+  }
+  100%{
+    background:#464646;
+  }
+}
+@-o-keyframes fadeBgColor {
+  0%{
+    background:none;
+  }
+  70%{
+    background:none;
+  }
+  100%{
+    background:#464646;
+  }
+}
+@keyframes fadeBgColor {
+  0%{
+    background:none;
+  }
+  70%{
+    background:none;
+  }
+  100%{
+    background:#464646;
+  }
+}
+
+.animated.animationDelay{
+  animation-delay:.4s;
+  -webkit-animation-delay:.4s;
+}
+.animated.animationDelayMed{
+  animation-delay:1.2s;
+  -webkit-animation-delay:1.2s;
+}
+.animated.animationDelayLong{
+  animation-delay:1.6s;
+  -webkit-animation-delay:1.6s;
+}
+.animated.fadeBgColor {
+  -webkit-animation-name: fadeBgColor;
+  -moz-animation-name: fadeBgColor;
+  -o-animation-name: fadeBgColor;
+  animation-name: fadeBgColor;
+}
+.animated.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }

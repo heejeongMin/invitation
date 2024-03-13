@@ -25,313 +25,556 @@
 
             <div class="col-12 col-md-8 position-static config-zone">
                 <form class="main-font">
-                    <div class="form-group intro">
-                        <p class="title">예식 정보</p>
-                        <div class="form-element-wrap">
-                            <label for="wedding-date">예식일자</label>
-                            <div class="row" id="wedding-date">
-                                <div class="col">
-                                    <input class="form-control form-control-sm date-picker main-font" type="text" name="date-picker" value="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="wedding-location">장소</label>
-                            <div class="row" id="wedding-location">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm main-font" id="loc-name" placeholder="예식 장소">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="wedding-address">주소</label>
-                            <div class="row" id="wedding-address">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm main-font" id="address" placeholder="주소검색" readonly>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group bride">
-                        <p class="title">신부측 정보</p>
-                        <div class="form-element-wrap">
-                            <label for="bride-name">신부님</label>
-                            <div class="row" id="bride-name">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" id="bride-lastname-kr" placeholder="성">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" id="bride-firstname-kr"  placeholder="이름">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="bride-name-en"></label>
-                            <div class="row" id="bride-name-en">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" id="bride-lastname-en" placeholder="영문 성">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" id="bride-firstname-en" placeholder="영문 이름">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="bride-phone"></label>
-                            <div class="row" id="bride-phone">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="연락처 ( '-' 없이 )">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="bride-father-name">아버님</label>
-                            <div class="row" id="bride-father-name">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="성">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="이름">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="bride-father-phone"></label>
-                            <div class="row" id="bride-father-phone">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="연락처 ( '-' 없이 )">
-                                </div>
-                                <div class="col form-check deceased" >
-                                    <input type="checkbox" class="form-check-input" id="bride-father-deceased-check">
-                                    <label class="form-check-label main-font" for="bride-father-deceased-check">고인</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="bride-mather-name">어머님</label>
-                            <div class="row" id="bride-mather-name">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="성">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="이름">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="bride-mother-phone"></label>
-                            <div class="row" id="bride-mother-phone">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="연락처 ( '-' 없이 )">
-                                </div>
-                                <div class="col form-check deceased" >
-                                    <input type="checkbox" class="form-check-input" id="bride-mother-deceased-check">
-                                    <label class="form-check-label" for="bride-mother-deceased-check">고인</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="bride-relation">관계</label>
-                            <div class="row" id="bride-relation">
-                                <select class="form-control form-control-sm main-font">
-                                    <option>딸</option>
-                                    <option>장녀</option>
-                                    <option>차녀</option>
-                                    <option>삼녀</option>
-                                    <option>막내</option>
-                                    <option>손녀</option>
-                                    <option>조카</option>
-                                    <option>동생</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group groom">
-                        <p class="title">신랑측 정보</p>
-                        <div class="form-element-wrap">
-                            <label for="groom-name">신랑님</label>
-                            <div class="row" id="groom-name">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" id="groom-lastname-kr"  placeholder="성">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" id="groom-firstname-kr"  placeholder="이름">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="groom-name-en"></label>
-                            <div class="row" id="groom-name-en">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" id="groom-lastname-en"  placeholder="영문 성">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" id="groom-firstname-en"  placeholder="영문 이름">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="groom-phone"></label>
-                            <div class="row" id="groom-phone">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="연락처 ( '-' 없이 )">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="groom-father-name">아버님</label>
-                            <div class="row" id="groom-father-name">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="성">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="이름">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="groom-father-phone"></label>
-                            <div class="row" id="groom-father-phone">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="연락처 ( '-' 없이 )">
-                                </div>
-                                <div class="col form-check deceased" >
-                                    <input type="checkbox" class="form-check-input" id="groom-father-deceased-check">
-                                    <label class="form-check-label" for="groom-father-deceased-check">고인</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="groom-mother-name">어머님</label>
-                            <div class="row" id="groom-mother-name">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="성">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="이름">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="groom-mother-phone"></label>
-                            <div class="row" id="groom-mother-phone">
-                                <div class="col">
-                                    <input type="text" class="form-control form-control-sm" placeholder="연락처 ( '-' 없이 )">
-                                </div>
-                                <div class="col form-check deceased" >
-                                    <input type="checkbox" class="form-check-input" id="groom-mother-deceased-check">
-                                    <label class="form-check-label" for="groom-mother-deceased-check">고인</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="groom-relation">관계</label>
-                            <div class="row" id="groom-relation">
-                                <select class="form-control form-control-sm main-font">
-                                    <option>아들</option>
-                                    <option>장남</option>
-                                    <option>차남</option>
-                                    <option>삼남</option>
-                                    <option>막내</option>
-                                    <option>손자</option>
-                                    <option>조카</option>
-                                    <option>동생</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group intro">
-                        <p class="title">청첩장 전면</p>
-
-                        <div class="form-element-wrap">
-                            <label for="intro-img-wrap" class="form-label">사진</label>
-                            <div class="row" id="intro-img-wrap">
-                                <input class="form-control form-control-sm" id="intro-img" type="file">
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="intro-img" class="form-label">디자인</label>
-                            <div class="row">
-                                <div class="col design-1">디자인 1</div>
-                                <div class="col design-2">디자인 2</div>
-                                <div class="col design-3">디자인 3</div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <label for="intro-img" class="form-label">효과</label>
-                            <div class="row">
-                                <div class="col effect-config">효과 1</div>
-                                <div class="col effect-config">효과 2</div>
-                                <div class="col effect-config">효과 없음</div>
-                            </div>
-                        </div>
-                        <div class="form-element-wrap">
-                            <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative config-intro" style ="width:250px;">
-                                <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-wrapper-config">
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="particle"></div>
-                                    <div class="image-wrap">
-                                        <img src="" class="main-photo" id="frame">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button main-font" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    기본 정보
+                                    <span class="main-font accordion-guide-info">필수 입력 입니다.</span>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-group intro">
+                                        <p class="title">예식 정보</p>
+                                        <div class="form-element-wrap">
+                                            <label for="wedding-date">예식일자</label>
+                                            <div class="row" id="wedding-date">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm date-picker main-font" type="text" name="date-picker" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="wedding-location">장소</label>
+                                            <div class="row" id="wedding-location">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="loc-name" placeholder="예식 장소">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="wedding-address">주소</label>
+                                            <div class="row" id="wedding-address">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="address" placeholder="주소검색" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <div class="card-bride-groom">
-                                        <p class="cursive-font names" id="names-config">heejeong & david</p>
-                                        <p class="cursive-font message">Getting Married</p>
+                                    <div class="form-group bride">
+                                        <p class="title">신부측 정보</p>
+                                        <div class="form-element-wrap">
+                                            <label for="bride-name">신부님</label>
+                                            <div class="row" id="bride-name">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="bride-lastname-kr" placeholder="성">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="bride-firstname-kr"  placeholder="이름">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bride-name-en"></label>
+                                            <div class="row" id="bride-name-en">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="bride-lastname-en" placeholder="영문 성">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="bride-firstname-en" placeholder="영문 이름">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bride-phone"></label>
+                                            <div class="row" id="bride-phone">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="연락처 ( '-' 없이 )">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bride-father-name">아버님</label>
+                                            <div class="row" id="bride-father-name">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="성">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="이름">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bride-father-phone"></label>
+                                            <div class="row" id="bride-father-phone">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="연락처 ( '-' 없이 )">
+                                                </div>
+                                                <div class="col form-check deceased" >
+                                                    <input type="checkbox" class="form-check-input main-font decesed-check" id="bride-father-deceased-check">
+                                                    <label class="form-check-label main-font" for="bride-father-deceased-check" style="font-size: 0.85em;">고인</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bride-mather-name">어머님</label>
+                                            <div class="row" id="bride-mather-name">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="성">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="이름">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bride-mother-phone"></label>
+                                            <div class="row" id="bride-mother-phone">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="연락처 ( '-' 없이 )">
+                                                </div>
+                                                <div class="col form-check deceased" >
+                                                    <input type="checkbox" class="form-check-input main-font decesed-check" id="bride-mother-deceased-check">
+                                                    <label class="form-check-label main-font" for="bride-mother-deceased-check" style="font-size: 0.85em;">고인</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bride-relation">관계</label>
+                                            <div class="row" id="bride-relation">
+                                                <select class="form-control form-control-sm main-font">
+                                                    <option>딸</option>
+                                                    <option>장녀</option>
+                                                    <option>차녀</option>
+                                                    <option>삼녀</option>
+                                                    <option>막내</option>
+                                                    <option>손녀</option>
+                                                    <option>조카</option>
+                                                    <option>동생</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="form-group groom">
+                                        <p class="title">신랑측 정보</p>
+                                        <div class="form-element-wrap">
+                                            <label for="groom-name">신랑님</label>
+                                            <div class="row" id="groom-name">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="groom-lastname-kr"  placeholder="성">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="groom-firstname-kr"  placeholder="이름">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="groom-name-en"></label>
+                                            <div class="row" id="groom-name-en">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="groom-lastname-en"  placeholder="영문 성">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" id="groom-firstname-en"  placeholder="영문 이름">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="groom-phone"></label>
+                                            <div class="row" id="groom-phone">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="연락처 ( '-' 없이 )">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="groom-father-name">아버님</label>
+                                            <div class="row" id="groom-father-name">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="성">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="이름">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="groom-father-phone"></label>
+                                            <div class="row" id="groom-father-phone">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="연락처 ( '-' 없이 )">
+                                                </div>
+                                                <div class="col form-check deceased" >
+                                                    <input type="checkbox" class="form-check-input decesed-check" id="groom-father-deceased-check">
+                                                    <label class="form-check-label main-font deceadsed" for="groom-father-deceased-check" style="font-size: 0.85em;">고인</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="groom-mother-name">어머님</label>
+                                            <div class="row" id="groom-mother-name">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="성">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="이름">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="groom-mother-phone"></label>
+                                            <div class="row" id="groom-mother-phone">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-sm main-font" placeholder="연락처 ( '-' 없이 )">
+                                                </div>
+                                                <div class="col form-check deceased" >
+                                                    <input type="checkbox" class="form-check-input decesed-check" id="groom-mother-deceased-check">
+                                                    <label class="form-check-label main-font" for="groom-mother-deceased-check" style="font-size: 0.85em;">고인</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="groom-relation">관계</label>
+                                            <div class="row" id="groom-relation">
+                                                <select class="form-control form-control-sm main-font">
+                                                    <option>아들</option>
+                                                    <option>장남</option>
+                                                    <option>차남</option>
+                                                    <option>삼남</option>
+                                                    <option>막내</option>
+                                                    <option>손자</option>
+                                                    <option>조카</option>
+                                                    <option>동생</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group intro">
+                                        <p class="title">청첩장 전면</p>
 
-                                    <div class="card-date-loc">
-                                        <p class="main-font message">
-                                            <span id="date-config">2021.09.04</span>
-                                            <span id="time-config">12:00</span>
-                                        </p>
-                                        <p class="main-font message" id="loc-config">롯데월드민속박물관 3층 전통혼례장</p>
+                                        <div class="form-element-wrap">
+                                            <label for="intro-img-wrap" class="form-label">사진</label>
+                                            <div class="row" id="intro-img-wrap">
+                                                <input class="form-control form-control-sm" id="intro-img" type="file">
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap" style="margin-top:5px;">
+                                            <label for="intro-img" class="form-label">디자인</label>
+                                            <div class="row">
+                                                <div class="col design-config ">디자인 1</div>
+                                                <div class="col design-config ">디자인 2</div>
+                                                <div class="col design-config ">디자인 3</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="intro-img" class="form-label">효과</label>
+                                            <div class="row">
+                                                <div class="col effect-config">효과 1</div>
+                                                <div class="col effect-config">효과 2</div>
+                                                <div class="col effect-config">효과 없음</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative config-intro" style ="width:250px;">
+                                                <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-wrapper-config">
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="particle"></div>
+                                                    <div class="image-wrap">
+                                                        <img src="" class="main-photo" id="frame">
+                                                    </div>
+
+                                                    <div class="card-bride-groom">
+                                                        <p class="cursive-font names" id="names-config">heejeong & david</p>
+                                                        <p class="cursive-font message">Getting Married</p>
+                                                    </div>
+
+                                                    <div class="card-date-loc">
+                                                        <p class="main-font message">
+                                                            <span id="date-config">2021.09.04</span>
+                                                            <span id="time-config">12:00</span>
+                                                        </p>
+                                                        <p class="main-font message" id="loc-config">롯데월드민속박물관 3층 전통혼례장</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed main-font" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    부가 정보
+                                    <span class="main-font accordion-guide-info">입력한 경우만 표시 됩니다.</span>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-group">
+                                        <p class="title">모시는글</p>
+                                        <div class="form-element-wrap">
+                                            <label for="invi-title">제목</label>
+                                            <div class="row" id="invi-title">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" placeholder="소중한 분들을 모십니다.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="invi-message">내용</label>
+                                            <div class="row" id="invi-message">
+                                                <div class="col">
+                                                    <textarea class="form-control main-font" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="title">오시는길</p>
+                                        <div class="form-element-wrap">
+                                            <label for="wedding-location-direction-bus">버스</label>
+                                            <div class="row" id="wedding-location-direction-bus">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="wedding-location-direction-metro">지하철</label>
+                                            <div class="row" id="wedding-location-direction-metro">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="wedding-location-direction-car">승용차</label>
+                                            <div class="row" id="wedding-location-direction-car">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="wedding-location-direction-tour-bus">전세버스</label>
+                                            <div class="row" id="wedding-location-direction-tour-bus">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="title">계좌번호</p>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title">제목</label>
+                                            <div class="row" id="bank-account-title">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="마음 전하실 곳">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-message">내용</label>
+                                            <div class="row" id="bank-account-message">
+                                                <div class="col">
+                                                    <textarea class="form-control main-font" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="dotted">
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-bride">제목</label>
+                                            <div class="row" id="bank-account-title-bride">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="신부측 계좌번호">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-bride-bank-name">은행</label>
+                                            <div class="row" id="bank-account-title-bride-bank-name">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="OO 은행">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-bride-bank-account">계좌번호</label>
+                                            <div class="row" id="bank-account-title-bride-bank-account">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="계좌번호">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-bride-bank-account-holder">예금주</label>
+                                            <div class="row" id="bank-account-title-bride-bank-account-holder">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="예금주">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-bride-kakao">카카오페이</label>
+                                            <div class="row kakao-div" id="bank-account-title-bride-kakao">
+                                                <div class="col kakao-div">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="https://qr.kakaopay.com/xxxx">
+                                                    <div class="main-font kakaopay-guide">GUIDE</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="dotted">
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-groom">제목</label>
+                                            <div class="row" id="bank-account-title-groom">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="신랑측 계좌번호">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-groom-bank-name">은행</label>
+                                            <div class="row" id="bank-account-title-groom-bank-name">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="OO 은행">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-groom-bank-account">계좌번호</label>
+                                            <div class="row" id="bank-account-title-groom-bank-account">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="계좌번호">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-groom-bank-account-holder">예금주</label>
+                                            <div class="row" id="bank-account-title-groom-bank-account-holder">
+                                                <div class="col">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="예금주">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element-wrap">
+                                            <label for="bank-account-title-groom-kakao">카카오페이</label>
+                                            <div class="row" id="bank-account-title-groom-kakao">
+                                                <div class="col kakao-div">
+                                                    <input class="form-control form-control-sm main-font" type="text" value="" placeholder="https://qr.kakaopay.com/xxxx">
+                                                    <div class="main-font kakaopay-guide">GUIDE</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="title">갤러리</p>
+                                        <div class="form-element-wrap">
+                                            <label for="intro-img-wrap" class="form-label">사진</label>
+<!--                                             https://bootsnipp.com/snippets/2eNKz-->
+                                            <div class="row" id="gallery-wrap">
+                                                <input class="form-control form-control-sm" id="gallery" type="file" multiple>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed main-font" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                                    무료 옵션
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-element-wrap">
+                                        <div class="row">
+                                            <div class="form-check" style="padding-left:0.5em">
+                                                <input class="form-check-input" type="checkbox" value="" id="board">
+                                                <label class="form-check-label" for="board">
+                                                    방명록
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-element-wrap">
+                                        <div class="row">
+                                            <div class="form-check" style="padding-left:0.5em">
+                                                <input class="form-check-input" type="checkbox" value="" id="music">
+                                                <label class="form-check-label" for="music">
+                                                    배경 음악
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed main-font" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                                    유료 옵션
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-element-wrap">
+                                        <div class="row">
+                                            <div class="form-check" style="padding-left:0.5em">
+                                                <input class="form-check-input" type="checkbox" value="" id="RSVP">
+                                                <label class="form-check-label" for="RSVP">
+                                                    RSVP
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-element-wrap">
+                                        <div class="row">
+                                            <div class="form-check" style="padding-left:0.5em">
+                                                <input class="form-check-input" type="checkbox" value="" id="RSVP">
+                                                <label class="form-check-label" for="RSVP">
+                                                    예식일 알림
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group ">
-                        <p class="title">모시는글</p>
-                        <div class="form-element-wrap">
-                            <label for="wedding-date">제목</label>
-                            <div class="row">
-                                <div class="col">
-                                    <textarea></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-sm new-form-btn main-font">Submit</button>
                 </form>
             </div>
         </div>

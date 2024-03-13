@@ -19,5 +19,6 @@ open class ApplicationWebConfig : WebMvcConfigurer {
 		registry.addViewController("/").setViewName("index")
 		registry.addViewController("/new").setViewName("new")
 		registry.addViewController("/demo").setViewName("demo")
+		registry.addViewController("/my").setViewName("my")
 	}
 }
