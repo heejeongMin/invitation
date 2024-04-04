@@ -1,7 +1,6 @@
 .particle {
   position: absolute;
   border-radius: 50%;
-  z-index: 1;
 }
 
 @for $i from 1 through 30 {

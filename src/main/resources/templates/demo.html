@@ -3,270 +3,516 @@
 
 <head th:replace="layout/header :: head ('은민이네')"></head>
 <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fa7c83de4ade4be4114725208ed04c4e"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="/css/sticky-footer-navbar.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
 <link href="/css/test.css" rel="stylesheet">
+<link href="/css/demo.css" rel="stylesheet">
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script type="text/javascript" src="/js/demo.js"></script>
 
-<body class="d-flex flex-column h-100">
+<body>
 <!--https://www.sliderrevolution.com/resources/css-animations-on-scroll/-->
 <!-- Begin page content -->
-<main class="flex-shrink-0">
-    <div class="invi-view-container">
-        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card">
-            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="invi-view-image-wrap">
-                    <img src="/images/wedding_photo.jpg" class="main-photo">
-                        <div class="invi-view-image-frame-1">
-                            <p class="cursive-font names">heejeong & david</p>
-                            <p class="cursive-font message">Getting Married</p>
-                        </div>
-                    </img>
+<div id="background">
+    <div class="invi-page invi-page-face">
+        <div class="inner-elements design-one" id="design-one-header">
+            <div id="design-one-header-center-wrap" class="center-text">
+                <div class="eb-garamond-font title-font" style="font-size: 30px;">
+                    09.04
                 </div>
-                <div class="invi-view-card-date-loc">
-                    <p class="main-font message">
-                        <span>2021.09.04</span>
-                        <span>12:00</span>
-                    </p>
-                    <p class="main-font message">롯데월드민속박물관 3층 전통혼례장</p>
+                <div class="eb-garamond-font title-font" style="font-size: 30px;">토요일 12:00</div>
+            </div>
+        </div>
+        <div class="inner-elements content" id="design-one-header-img-wrap">
+            <img src="./images/main2.jpg"/>
+        </div>
+    </div>
+    <div class="invi-page animatable fadeInDown">
+        <div id="intro-msg-wrap" class="center-text">
+            <div class="divider">
+                <img src="./images/divider.png">
+            </div>
+            <div class="eb-garamond-font">인연의 소중함을 깊이 새기고</div>
+            <div class="eb-garamond-font">사랑과 신의를 다짐하며</div>
+            <div class="eb-garamond-font">저희들 이제 인생의 길을 함께 가려 합니다.</div>
+            <div class="eb-garamond-font">선물과 같은 오늘 함께 축복해 주시면 </div>
+            <div class="eb-garamond-font">더 없는 기쁨으로 간직하겠습니다.</div>
+            <div class="divider">
+                <img src="./images/divider.png">
+            </div>
+        </div>
+        <div id="intro-groom-bride">
+            <table class="eb-garamond-font">
+                <tr>
+                    <td style="text-align:right;">민선식</td>
+                    <td>·</td>
+                    <td>강유경</td>
+                    <td style="color:grey;">의 장녀</td>
+                    <td style="text-align:right;">민희정</td>
+                    <td><i class="fa fa-phone" onclick="window.open('tel:01037422028')"></i></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;">영 데이비드</td>
+                    <td>·</td>
+                    <td>영 조안</td>
+                    <td style="color:grey;">의 장남</td>
+                    <td style="text-align:right;">영 데이비드</td>
+                    <td><i class="fa fa-phone" onclick="window.open('tel:01037422028')"></i></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="invi-page animatable fadeInDown">
+        <div class="calendarBox">
+            <div id="month"></div>
+            <div id="calendar"></div>
+        </div>
+        <div class="divider">
+            <img src="./images/divider.png">
+        </div>
+        <div id="count-down-wrap" class="eb-garamond-font default-font-color center-text">
+            <p>희정 <i class="fa fa-heart" style="color: pink;"></i> 데이비드영의 결혼식까지</p>
+            <div id="count-down" class="eb-garamond-font default-font-color center-text"></div>
+        </div>
+        <div class="divider">
+            <img src="./images/divider.png">
+        </div>
+    </div>
+    <div class="invi-page invi-page-gallary animatable fadeInDown">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval=3000>
+                    <img src="./images/gal1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval=3000>
+                    <img src="./images/gal2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval=3000>
+                    <img src="./images/gal3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval=3000>
+                    <img src="./images/gal4.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval=3000>
+                    <img src="./images/gal5.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="invi-page animatable fadeInDown">
+        <p class="eb-garamond-font center-text title-font">오시는길</p>
+        <div id="map-wrap">
+            <div id="map"></div>
+            <div class="direction-info">
+                <div id="bus">
+                    <p class="venu-direction eb-garamond-font"><i class="fa fa-bus"></i>지하철 이용 시</p>
+                    <p class="eb-garamond-font">2, 8호선 잠실역 4번출구</p>
+                </div>
+                <div id="car" >
+                    <p class="venu-direction eb-garamond-font"><i class="fa fa-car"></i>자가용 이용 시</p>
+                    <p class="eb-garamond-font">잠실역 롯데마트 지하1층</p>
+                </div>
+                <div id="additional-venu-info-wrap">
+                    <div class="additional-venu-info">
+                        <p class="eb-garamond-font additional-venu-info-title center-text">주차 안내</p>
+                        <p class="eb-garamond-font additional-venu-info-body">롯데월드 단지 전체 주차장 이용 가능<br/>(2시간 무료, 이후 유료 (1,000원/30분))</p>
+                    </div>
+                    <div class="additional-venu-info">
+                        <p class="eb-garamond-font additional-venu-info-title center-text">롯데마트에서 혼례장까지 찾아오시는 길 안내</p>
+                        <p class="eb-garamond-font additional-venu-info-body">https://adventure.lotteworld.com/wedding/location/contentsid/653/index.do</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">
-            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="image-wrap">
-                    <img src="/images/wedding_photo.jpg" class="main-photo">
+    </div>
+    <div class="invi-page animatable fadeInDown">
+        <div class="eb-garamond-font center-text guest-message-title title-font">마음 전하실 곳</div>
+        <div id="account-message-wrap">
+            <div class="divider">
+                <img src="./images/divider.png">
+            </div>
+            <div class="eb-garamond-font center-text">참석이 어려우신 분들을 위해<br/>계좌번호를 기재하였습니다.<br/>너그러운 마음으로 양해 부탁드립니다.</div>
+            <div class="divider">
+                <img src="./images/divider.png">
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample" style="padding: 0 30px;">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            신랑 측 계좌번호
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <ul>
+                            <li>
+                                <div>영 데이비드</div>
+                                <div class="account-wrap">
+                                    <div>우리은행 <span class="account-number">123123123123</span></div>
+                                    <a class="kakao-pay-btn-wrap" href="https://qr.kakaopay.com/123456789"><img src="./images/payment_icon_yellow_small.png"/></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="card-bride-groom">
-                    <p class="cursive-font names">heejeong & david</p>
-                    <p class="cursive-font message">Getting Married</p>
-                </div>
-
-                <div class="card-date-loc">
-                    <p class="main-font message">
-                        <span>2021.09.04</span>
-                        <span>12:00</span>
-                    </p>
-                    <p class="main-font message">롯데월드민속박물관 3층 전통혼례장</p>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            신부 측 계좌번호
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <ul>
+                            <li>
+                                <div>민희정</div>
+                                <div class="account-wrap">
+                                    <div>우리은행 <span class="account-number">123123123123</span></div>
+                                    <a class="kakao-pay-btn-wrap" href="https://qr.kakaopay.com/123456789"><img src="./images/payment_icon_yellow_small.png"/></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>민아빠</div>
+                                <div class="account-wrap">
+                                    <div>국민은행 <span class="account-number">454545454545</span></div>
+                                    <a class="kakao-pay-btn-wrap" href="https://qr.kakaopay.com/123456789"><img src="./images/payment_icon_yellow_small.png"/></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">
-            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="image-wrap">
-                    <img src="/images/wedding_photo.jpg" class="main-photo">
-                </div>
+    </div>
+    <div class="invi-page animatable fadeInDown">
+        <div class="eb-garamond-font center-text guest-message-title title-font">방명록</div>
+        <button type="button" class="btn btn-secondary write-message-button eb-garamond-font" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+            글쓰기</button>
 
-                <div class="card-bride-groom">
-                    <p class="cursive-font names">heejeong & david</p>
-                    <p class="cursive-font message">Getting Married</p>
-                </div>
-
-                <div class="card-date-loc">
-                    <p class="main-font message">
-                        <span>2021.09.04</span>
-                        <span>12:00</span>
-                    </p>
-                    <p class="main-font message">롯데월드민속박물관 3층 전통혼례장</p>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label eb-garamond-font">작성자</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label eb-garamond-font">내용</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="post-message-button" type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">게시하기</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">
-            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="image-wrap">
-                    <img src="/images/wedding_photo.jpg" class="main-photo">
-                </div>
 
-                <div class="card-bride-groom">
-                    <p class="cursive-font names">heejeong & david</p>
-                    <p class="cursive-font message">Getting Married</p>
+        <div id="guest-messages">
+            <div class="guest-message-card">
+                <div class="guest-message-audit">
+                    <p class="guest-message-created-at eb-garamond-font">2021.09.01 18:00</p>
+                    <p class="guest-message-created-by eb-garamond-font">홍길동</p>
                 </div>
-
-                <div class="card-date-loc">
-                    <p class="main-font message">
-                        <span>2021.09.04</span>
-                        <span>12:00</span>
-                    </p>
-                    <p class="main-font message">롯데월드민속박물관 3층 전통혼례장</p>
+                <p class="eb-garamond-font guest-message-content">결혼을 축하 드립니다</p>
+            </div>
+            <div class="guest-message-card">
+                <div class="guest-message-audit">
+                    <p class="guest-message-created-at eb-garamond-font">2021.09.01 18:00</p>
+                    <p class="guest-message-created-by eb-garamond-font">홍길동</p>
                 </div>
+                <p class="eb-garamond-font guest-message-content">축하해 ~</p>
+            </div>
+            <div class="guest-message-card">
+                <div class="guest-message-audit">
+                    <p class="guest-message-created-at eb-garamond-font">2021.09.01 18:00</p>
+                    <p class="guest-message-created-by eb-garamond-font">홍길동</p>
+                </div>
+                <p class="eb-garamond-font guest-message-content">너무 보기 좋습니다 ^^ 언제까지나 지금 처럼 행복하게 지내시길 기원합니다</p>
+            </div>
+            <div class="guest-message-card">
+                <div class="guest-message-audit">
+                    <p class="guest-message-created-at eb-garamond-font">2021.09.01 18:00</p>
+                    <p class="guest-message-created-by eb-garamond-font">홍길동</p>
+                </div>
+                <p class="eb-garamond-font guest-message-content">결혼 축하해!!</p>
             </div>
         </div>
-        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">
-            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="image-wrap">
-                    <img src="/images/wedding_photo.jpg" class="main-photo">
-                </div>
-
-                <div class="card-bride-groom">
-                    <p class="cursive-font names">heejeong & david</p>
-                    <p class="cursive-font message">Getting Married</p>
-                </div>
-
-                <div class="card-date-loc">
-                    <p class="main-font message">
-                        <span>2021.09.04</span>
-                        <span>12:00</span>
-                    </p>
-                    <p class="main-font message">롯데월드민속박물관 3층 전통혼례장</p>
+    </div>
+    <div class="invi-page animatable fadeInDown">
+        <div class="eb-garamond-font center-text title-font">참석 의사 전달</div>
+        <div class="divider">
+            <img src="./images/divider.png">
+        </div>
+        <div class="eb-garamond-font center-text">
+            모든 분들께<br>
+            부족함 없는 예식을 준비하기 위해<br>
+            참석 및 식사 여부를 미리 여쭙고자 합니다.<br><br>
+            부담없이 알려주시면<br>
+            정성껏 준비하겠습니다.
+        </div>
+        <div class="divider">
+            <img src="./images/divider.png">
+        </div>
+        <div class="rsvp-btn-wrap">
+            <button type="button" id="rsvp-btn" class="btn btn-secondary write-message-button eb-garamond-font center-text" data-bs-toggle="modal" data-bs-target="#rsvp-modal">참석 의사 전달하기</button>
+        </div>
+        <div class="modal fade" id="rsvp-modal" tabindex="-1" aria-labelledby="rsvp-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label eb-garamond-font">구분</label>
+<!--                                <input type="text" class="form-control" id="recipient-name">-->
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label eb-garamond-font">성함</label>
+<!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label eb-garamond-font">연락처</label>
+                                <!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label eb-garamond-font">메모</label>
+                                <!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label eb-garamond-font">식사</label>
+                                <!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label eb-garamond-font">참석인원</label>
+                                <!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="send-rsvp-btn" type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">보내기</button>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
-</main>
+    <div class="invi-page-end animatable fadeInDown">
+        <div>
+
+        </div>
+    </div>
+    </div>
+<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card">-->
+<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
+
+<!--                <div class="invi-view-image-wrap">-->
+<!--                    <img src="/images/wedding_photo.jpg" class="main-photo">-->
+<!--                        <div class="invi-view-image-frame-1">-->
+<!--                            <p class="cursive-font names">heejeong & david</p>-->
+<!--                            <p class="cursive-font message">Getting Married</p>-->
+<!--                        </div>-->
+<!--                    </img>-->
+<!--                </div>-->
+<!--                <div class="invi-view-card-date-loc">-->
+<!--                    <p class="main-font message">-->
+<!--                        <span>2021.09.04</span>-->
+<!--                        <span>12:00</span>-->
+<!--                    </p>-->
+<!--                    <p class="main-font message">롯데월드민속박물관 3층 전통혼례장</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">-->
+<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="divider-wrap">-->
+<!--                    <img src="/images/heart.png">-->
+<!--                </div>-->
+<!--                <div class="intro-msg-wrap">-->
+<!--                    <p class="main-font" id="intro-msg-wrap-title">소중한 분들을 모십니다.</p>-->
+<!--                    <p class="main-font" id="intro-msg-wrap-content">인연의 소중함을 깊이 새기고,<br/>사랑과 신의를 다짐하며<br/>저희들 이제 인생의 길을 함께 가려 합니다.<br/>선물과 같은 오늘<br/>함께 축복해 주시면 더 없는 기쁨으로 간직하겠습니다.</p>-->
+<!--                </div>-->
+<!--                <div class = "intro-image-wrap">-->
+<!--                    <img src="/images/JAN_5070.jpg">-->
+<!--                </div>-->
+<!--                <div class="invi-view-contact">-->
+<!--                    <div onclick="window.open('tel:01037422028')">연락하기</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">-->
+<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="divider-wrap">-->
+<!--                    <img src="/images/heart.png">-->
+<!--                </div>-->
+<!--                <div clss="invi-view-gallery">-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">-->
+<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="divider-wrap">-->
+<!--                    <img src="/images/heart.png">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">-->
+<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="particle"></div>-->
+<!--                <div class="">-->
+<!--                    <img src="/images/heart.png">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
 </body>
 </html>

@@ -22,6 +22,7 @@
 .wagle-font {
     font-family: "WagleWagle";
     font-weight: normal;
+
 }
 
 input.main-font::placeholder {
@@ -389,6 +390,7 @@ hr.dotted {
 
 .invi-view-wrapper {
     height: 100vh;
+    text-align: center;
 }
 
 .invi-view-wrapper .invi-view-image-wrap {
@@ -530,4 +532,56 @@ hr.dotted {
   -moz-animation-name: fadeInDown;
   -o-animation-name: fadeInDown;
   animation-name: fadeInDown;
+}
+
+
+
+
+.preview-zone > embed {
+    width: 100%;
+    height: 100%;
+}
+
+.divider-wrap {
+    width: 3em;
+    height: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+.divider-wrap > img {
+    height: 100%;
+    width: 100%;
+}
+
+.intro-msg-wrap {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-style: italic;
+}
+
+#intro-msg-wrap-title {
+    margin-top: 2em;
+}
+
+#intro-msg-wrap-content {
+    margin-top: 2em;
+}
+
+br {
+   display: block;
+   margin: 12px 0;
+   content: " ";
+}
+
+.intro-image-wrap {
+    width : 300px;
+    height: auto;
+    margin-bottom: 2em;
+}
+
+.intro-image-wrap > img {
+    width: 100%;
+    height: 100%;
 }

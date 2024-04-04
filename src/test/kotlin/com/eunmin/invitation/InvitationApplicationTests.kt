@@ -8,6 +8,10 @@ class InvitationApplicationTests {
 
 	@Test
 	fun contextLoads() {
+
+
 	}
+
+
 
 }
