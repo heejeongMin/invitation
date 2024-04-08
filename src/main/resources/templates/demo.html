@@ -289,36 +289,51 @@
                     <div class="modal-header">
                         <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body rsvp-body">
                         <form>
-                            <div class="mb-3">
+                            <div class="mb-3 rsvp-box">
                                 <label for="recipient-name" class="col-form-label eb-garamond-font">구분</label>
-<!--                                <input type="text" class="form-control" id="recipient-name">-->
+                                <div class="rsvp-side-select-wrap rsvp-box">
+                                    <div class="side eb-garamond-font">신랑</div>
+                                    <div class="side eb-garamond-font">신부</div>
+                                </div>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 rsvp-box">
                                 <label for="message-text" class="col-form-label eb-garamond-font">성함</label>
-<!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                                <input class="form-control"/>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 rsvp-box">
                                 <label for="message-text" class="col-form-label eb-garamond-font">연락처</label>
-                                <!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                                <input class="form-control"/>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 rsvp-box">
                                 <label for="message-text" class="col-form-label eb-garamond-font">메모</label>
-                                <!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                                <input class="form-control"/>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 rsvp-box">
                                 <label for="message-text" class="col-form-label eb-garamond-font">식사</label>
-                                <!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                                <input type="radio" id="html" name="fav_language" value="YN">
+                                <label for="html" class="radio-label">미정</label><br>
+                                <input type="radio" id="css" name="fav_language" value="Y">
+                                <label for="css" class="radio-label">예정</label><br>
+                                <input type="radio" id="javascript" name="fav_language" value="N">
+                                <label for="javascript" class="radio-label">불참</label>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 rsvp-box">
                                 <label for="message-text" class="col-form-label eb-garamond-font">참석인원</label>
-                                <!--                                <textarea class="form-control" id="message-text"></textarea>-->
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <option selected>총 1명(본인 포함)</option>
+                                    <option value="1">총 2명(본인 포함)</option>
+                                    <option value="2">총 3명(본인 포함)</option>
+                                    <option value="3">총 4명(본인 포함)</option>
+                                    <option value="3">총 5명(본인 포함)</option>
+                                </select>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button id="send-rsvp-btn" type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">보내기</button>
+                        <button id="send-rsvp-btn" type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">
+                            보내기</button>
                     </div>
                 </div>
             </div>

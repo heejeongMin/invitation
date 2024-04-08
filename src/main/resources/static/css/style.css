@@ -258,6 +258,10 @@ main > .container {
     height: 100%;
 }
 
+.config-zone {
+    height: 100vh;
+}
+
 .config-zone > form {
     padding: 15px;
 }
@@ -585,3 +589,9 @@ br {
     width: 100%;
     height: 100%;
 }
+
+@media (max-width: 767px) {
+        .hidden-mobile {
+          display: none;
+        }
+      }

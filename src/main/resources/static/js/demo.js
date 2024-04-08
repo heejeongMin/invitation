@@ -253,6 +253,21 @@ $('#post-message-button').on('click', function(e) {
 });
 //방명록
 
+//rsvp 신랑신부 구분
+$('.side').on('click', function() {
+    $('.side').each(function() {
+        $(this).removeClass('side-groom').removeClass('side-bride');
+    })
+    if($(this).text() == '신랑') {
+        $(this).addClass('side-groom');
+        $('')
+    } else if($(this).text() == '신부') {
+        $(this).addClass('side-bride');
+    }
+});
+//rsvp 신랑신부 구분
+
+
 
 
 

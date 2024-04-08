@@ -283,6 +283,10 @@ h1 {
     color: grey;
 }
 
+.btn-secondary:focus {
+    border-color: none;
+}
+
 
 .modal-backdrop {
     display: none;
@@ -332,4 +336,46 @@ li {
     padding: 10px;
     border-radius: 15px;
     background-color: snow;
+}
+
+.rsvp-box {
+    display: flex;
+}
+
+.rsvp-box > label:first-child {
+    width: 120px;
+}
+
+.rsvp-box > input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 12px;
+}
+
+.side {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    background: lightgrey;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.rsvp-body {
+    font-size: 12px;
+}
+
+.radio-label {
+  width: 40px;
+  padding-right: 10px;
+  padding: 7px 6px 0px 3px;
+}
+
+.side-groom {
+    background-color: lightblue;
+}
+
+.side-bride {
+    background-color: pink;
 }
