@@ -23,6 +23,9 @@ $(document).ready(function(){
   });
 
   $('.date-picker').on("change", function() {
+    var x = $("#preview-embed");
+    console.log(x);
+
     (event.target.type == 'date')
         ? $("#date-config").text(event.target.value)
         : $("#time-config").text(event.target.value)
@@ -42,7 +45,6 @@ $(document).ready(function(){
   });
 
   $(window).scroll(function() {
-    console.log("test");
     doAnimations();
   });
 //  $(window).trigger('scroll');

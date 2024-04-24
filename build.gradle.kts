@@ -3,9 +3,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "3.1.3"
 	id("io.spring.dependency-management") version "1.1.3"
-	kotlin("jvm") version "1.9.10"
-	kotlin("plugin.spring") version "1.9.10"
-	kotlin("plugin.jpa") version "1.9.10"
+	kotlin("jvm") version "1.9.0"
+	kotlin("plugin.spring") version "1.9.0"
+	kotlin("plugin.jpa") version "1.9.0"
 }
 
 group = "com.eunmin"
@@ -24,10 +24,12 @@ dependencies {
 	/**
 	 * Spring
 	 */
-//	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("org.springframework.boot:spring-boot-starter-security")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
 	/**
@@ -41,13 +43,20 @@ dependencies {
 	/**
 	 * Database
 	 */
-	implementation("mysql:mysql-connector-java:8.0.30")
+	implementation("org.postgresql:postgresql")
 	implementation ("org.liquibase:liquibase-core")
 
 	/**
 	 * Logging
 	 */
 	implementation("io.github.microutils:kotlin-logging:2.1.23")
+
+	/**
+	 * others
+	 */
+	implementation("io.jsonwebtoken:jjwt:0.9.1")
+	implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

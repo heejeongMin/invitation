@@ -13,6 +13,10 @@
     <link href="/css/sticky-footer-navbar.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/test.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/auth.js"></script>
+
     <title th:text="${title}">은민이네</title>
 
 </head>
@@ -38,8 +42,12 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
+<!--                    <li class="nav-item" th:switch="${auth}">-->
                     <li class="nav-item">
-                        <a class="nav-link main-font" href="/user/login">로그인</a>
+                        <a class="nav-link main-font login" id="auth">로그인</a>
+<!--                        <input id="login" th:value="${auth}" hidden>-->
+<!--                        <a class="nav-link main-font logout" th:case="login">로그아웃</a>-->
+<!--                        <a class="nav-link main-font login" th:case="*">로그인</a>-->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link main-font" href="/my">나의 청첩장</a>

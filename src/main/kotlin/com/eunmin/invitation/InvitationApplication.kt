@@ -11,14 +11,5 @@ class InvitationApplication
 
 fun main(args: Array<String>) {
 	runApplication<InvitationApplication>(*args)
-}
 
-@Configuration
-open class ApplicationWebConfig : WebMvcConfigurer {
-	override fun addViewControllers(registry: ViewControllerRegistry) {
-		registry.addViewController("/").setViewName("index")
-		registry.addViewController("/new").setViewName("new")
-		registry.addViewController("/demo").setViewName("demo")
-		registry.addViewController("/my").setViewName("my")
-	}
 }

@@ -1,7 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100">
-
-<head th:replace="layout/header :: head ('은민이네')"></head>
+<html lang="en" class="h-100" >
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -20,7 +18,7 @@
 <body>
 <!--https://www.sliderrevolution.com/resources/css-animations-on-scroll/-->
 <!-- Begin page content -->
-<div id="background">
+<div id="background" th:fragment="demo">
     <div class="invi-page invi-page-face">
         <div class="inner-elements design-one" id="design-one-header">
             <div id="design-one-header-center-wrap" class="center-text">
@@ -338,7 +336,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="invi-page-end animatable fadeInDown">
         <div>
@@ -346,188 +343,5 @@
         </div>
     </div>
     </div>
-<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card">-->
-<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
-
-<!--                <div class="invi-view-image-wrap">-->
-<!--                    <img src="/images/wedding_photo.jpg" class="main-photo">-->
-<!--                        <div class="invi-view-image-frame-1">-->
-<!--                            <p class="cursive-font names">heejeong & david</p>-->
-<!--                            <p class="cursive-font message">Getting Married</p>-->
-<!--                        </div>-->
-<!--                    </img>-->
-<!--                </div>-->
-<!--                <div class="invi-view-card-date-loc">-->
-<!--                    <p class="main-font message">-->
-<!--                        <span>2021.09.04</span>-->
-<!--                        <span>12:00</span>-->
-<!--                    </p>-->
-<!--                    <p class="main-font message">롯데월드민속박물관 3층 전통혼례장</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">-->
-<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="divider-wrap">-->
-<!--                    <img src="/images/heart.png">-->
-<!--                </div>-->
-<!--                <div class="intro-msg-wrap">-->
-<!--                    <p class="main-font" id="intro-msg-wrap-title">소중한 분들을 모십니다.</p>-->
-<!--                    <p class="main-font" id="intro-msg-wrap-content">인연의 소중함을 깊이 새기고,<br/>사랑과 신의를 다짐하며<br/>저희들 이제 인생의 길을 함께 가려 합니다.<br/>선물과 같은 오늘<br/>함께 축복해 주시면 더 없는 기쁨으로 간직하겠습니다.</p>-->
-<!--                </div>-->
-<!--                <div class = "intro-image-wrap">-->
-<!--                    <img src="/images/JAN_5070.jpg">-->
-<!--                </div>-->
-<!--                <div class="invi-view-contact">-->
-<!--                    <div onclick="window.open('tel:01037422028')">연락하기</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">-->
-<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="divider-wrap">-->
-<!--                    <img src="/images/heart.png">-->
-<!--                </div>-->
-<!--                <div clss="invi-view-gallery">-->
-
-<!--                </div>-->
-
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">-->
-<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="divider-wrap">-->
-<!--                    <img src="/images/heart.png">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative invi-view-card animatable fadeInDown">-->
-<!--            <div class="col p-4 d-flex flex-column position-static invi-wrapper invi-view-wrapper">-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="particle"></div>-->
-<!--                <div class="">-->
-<!--                    <img src="/images/heart.png">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
 </body>
 </html>
