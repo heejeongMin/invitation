@@ -230,6 +230,11 @@ marker.setMap(map);
 
 
 //방명록
+$(".write-message-button").on('click', function(e) {
+    $('#recipient-name').val('');
+    $('#message-text').val('');
+});
+
 $('#post-message-button').on('click', function(e) {
     var today = new Date();
     var year = today.getFullYear();

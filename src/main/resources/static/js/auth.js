@@ -9,10 +9,17 @@ $(document).ready(function(){
         }
     })
 
-    $(".login").on('click', function() {
-        login();
-        console.log("test");
+    $("#auth").on('click', function(e) {
+        if(e.target.innerText == "로그아웃") {
+            logout();
+        } else {
+             login();
+        }
     });
+
+    function logout() {
+        location.href = "http://localhost:8080/logout"
+    }
 
     function login() {
         const client_id = 'client_id=dffccdd7bda4104d3214311ae335fd78';

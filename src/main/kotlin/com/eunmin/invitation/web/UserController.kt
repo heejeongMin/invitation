@@ -1,23 +1,38 @@
 package com.eunmin.invitation.web
 
 import com.eunmin.invitation.service.UserService
+import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
 import mu.KotlinLogging
-import org.springframework.boot.web.server.Cookie
-import org.springframework.boot.web.servlet.server.Session
 import org.springframework.stereotype.Controller
-import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
-import org.springframework.web.servlet.ModelAndView
 import org.springframework.web.servlet.mvc.support.RedirectAttributes
-import org.springframework.web.servlet.view.RedirectView
 
 @Controller
 class UserController(
-    private val userService: UserService
+    private val userService: UserService,
+    private val blackList : MutableList<String> = mutableListOf()
 ) {
+
+    @GetMapping("/logout")
+    fun logout(
+        request: HttpServletRequest,
+        response: HttpServletResponse
+    ) : String{
+        val cookies = request.cookies
+        cookies.forEach {
+            it?.let {
+                if(it.name == "token") {
+                    it.maxAge = 0
+                    response.addCookie(it)
+                    blackList.add(it.value)
+                }
+            }
+        }
+
+        return "redirect:/"
+    }
 
     @GetMapping("/login")
     fun login(

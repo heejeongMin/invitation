@@ -19,7 +19,7 @@ class UserService(
 ) {
 
     @Transactional
-    fun login(code: String) : String=
+    fun login(code: String) : String =
         with(kakaoAdapter.getToken(code)) {
             val user = getOrCreateUser(kakaoAdapter.getProfile(this))
             tokenProvider.createToken(user.name)

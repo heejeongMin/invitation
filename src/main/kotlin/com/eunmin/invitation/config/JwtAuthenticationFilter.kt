@@ -44,21 +44,6 @@ class JwtAuthenticationFilter(
         filterChain.doFilter(request, response)
     }
 
-    private fun isLoginOrLogout(request: HttpServletRequest) : Boolean {
-        val isPathLoginOrLogout = request.requestURI.contains("/game/user/login") ||
-                request.requestURI.contains("/game/user/logout")
-
-
-       return isPathLoginOrLogout && request.method == "POST"
-    }
-
-//    private fun userAccessCheck(username: String) {
-//        var user = userRepository.findByUsername(username)?: throw DataNotFoundException("user not found")
-//        if(user.hasUserLoggedOut()) {
-//            throw TokenExpiredException()
-//        }
-//    }
-
     private fun parseBearerToken(request: HttpServletRequest) = request.getHeader(HttpHeaders.AUTHORIZATION)
         .takeIf { it?.startsWith("Bearer ", true) ?: false }?.substring(7)
 
